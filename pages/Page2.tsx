@@ -2,7 +2,6 @@ import React from 'react'
 import { FlatList, StyleSheet, Text, Touchable, TouchableOpacity } from 'react-native'
 import { IPage } from '../App'
 
-
 const items = [
     { id: '0', text: 'View' },
     { id: '1', text: 'Text' },
@@ -39,4 +38,9 @@ const styles = StyleSheet.create({
         marginBottom: 5,
         backgroundColor: 'skyblue',
     },
+     button: {
+    backgroundColor: '#9c79bd',
+    borderRadius: 5,
+    width: 100,
+  }
 })
