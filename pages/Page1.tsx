@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native'
+import { View, StyleSheet, Image, Text, TouchableOpacity, Alert } from 'react-native'
 import {IPage} from '../App'
 import logo from "../assets/logo2.png"
 import Toggle from '../components/Toggle'
@@ -39,6 +39,9 @@ export default function Page1({ setPageI }: IPage) {
           setAlignItems(option)
         }}
       />
+      <TouchableOpacity onPress={() => {
+        Alert.alert('Clicou!')
+      }}>
       <Image source={logo} style={styles.img} />
     <TouchableOpacity onPress={()=>{
         setPageI(2)
