@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { View, StyleSheet, Image, Text, TouchableOpacity, Alert } from 'react-native'
-import {IPage} from '../App'
+import { View, StyleSheet, Text, Image, TouchableOpacity, Alert } from 'react-native'
 import logo from "../assets/logo2.png"
 import Toggle from '../components/Toggle'
+import { IPage } from '../App'
 
 export default function Page1({ setPageI }: IPage) {
   const [flexDirection, setFlexDirection] = useState('row')
@@ -42,12 +42,13 @@ export default function Page1({ setPageI }: IPage) {
       <TouchableOpacity onPress={() => {
         Alert.alert('Clicou!')
       }}>
-      <Image source={logo} style={styles.img} />
-    <TouchableOpacity onPress={()=>{
+        <Image source={logo} style={styles.img} />
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => {
         setPageI(2)
-    }}>
-     <Text>Pagina2</Text>
-     </TouchableOpacity>
+      }}>
+        <Text>Página 2</Text>
+      </TouchableOpacity>
       <View style={[styles.layout, layoutStyle]}>
         <View style={styles.box} />
         <View style={styles.box} />
@@ -81,7 +82,9 @@ const styles = StyleSheet.create({
     margin: 5,
   },
   img: {
-    width: 150,
-    height: 150
+    width: 100,
+    height: 100,
   }
 })
+
+
